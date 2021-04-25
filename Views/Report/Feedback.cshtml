@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Feedback Details";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<!--
+Template Name: BRILLIANT Bootstrap Admin Template
+Version: 4.5.6
+Author: WebThemez
+Website: http://www.webthemez.com/
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+    <div id="page-wrapper">
+        <div class="header" style="padding-top: 3%;">
+
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Feedback Details</a></li>
+
+            </ol>
+
+        </div>
+
+        <div id="page-inner">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            User Feedback Details
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Mobile No</th>
+                                            <th>Email Id</th>
+                                            <th>Comments</th>
+                                        
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @*<tr class="odd gradeX">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 4.0</td>
+                                                <td>Win 95+</td>
+                                                <td class="center">4</td>
+                                                <td class="center">X</td>
+                                                <td>pass</td>
+                                                <td>Edit</td>
+                                                <td>Active</td>
+                                            </tr>
+                                            <tr class="even gradeC">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.0</td>
+                                                <td>Win 95+</td>
+                                                <td class="center">5</td>
+                                                <td class="center">C</td>
+                                                <td>pass</td>
+                                                <td>Edit</td>
+                                                <td>Active</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.5</td>
+                                                <td>Win 95+</td>
+                                                <td class="center">5.5</td>
+                                                <td class="center">A</td>
+                                                <td>pass</td>
+                                                <td>Edit</td>
+                                                <td>Active</td>
+                                            </tr>
+                                            <tr class="even gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 6</td>
+                                                <td>Win 98+</td>
+                                                <td class="center">6</td>
+                                                <td class="center">A</td>
+                                                <td>pass</td>
+                                                <td>Edit</td>
+                                                <td>Active</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 7</td>
+                                                <td>Win XP SP2+</td>
+                                                <td class="center">7</td>
+                                                <td class="center">A</td>
+                                                <td>pass</td>
+                                                <td>Edit</td>
+                                                <td>Active</td>
+                                            </tr>*@
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--End Advanced Tables -->
+                </div>
+            </div>
+
+
+
+        </div>
+       
+    </div>
+
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="~/Content/Dashboard/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="~/Content/Dashboard/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="~/Content/Dashboard/js/jquery.metisMenu.js"></script>
+    <!-- DATA TABLE SCRIPTS -->
+    <script src="~/Content/Dashboard/js/dataTables/jquery.dataTables.js"></script>
+    <script src="~/Content/Dashboard/js/dataTables/dataTables.bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTables-example').dataTable();
+        });
+    </script>
+    <!-- Custom Js -->
+    <script src="~/Content/Dashboard/js/custom-scripts.js"></script>
+
+
+</body>
+
+</html>

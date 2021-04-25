@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<!--
+Template Name: BRILLIANT Bootstrap Admin Template
+Version: 4.5.6
+Author: WebThemez
+Website: http://www.webthemez.com/
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="" name="description" />
+    <meta content="webthemez" name="author" />
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap Styles-->
+
+    <link href="~/Content/Dashboard/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="~/Content/Dashboard/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="~/Content/Dashboard/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="~/Content/Dashboard/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="~/Content/Dashboard/js/Lightweight-Chart/cssCharts.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><strong><i class="icon fa fa-user"></i>   BP - ADMIN</strong></a>
+
+            <div id="sideNav" href="">
+                <i class="fa fa-bars icon"></i>
+            </div>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+           
+            <!-- /.dropdown-alerts -->
+            <!--</li>-->
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Arjun</a>
+                    </li>
+                    @*<li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>*@
+                    <li class="divider"></li>
+                    <li>
+                        <a href="http://localhost:50766/#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+    </nav>
+    <!--/. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link @*active-menu*@" data-name="DvIndex" href="@Url.Action("Index", "Admin")"><i class="fa fa-dashboard"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-name="DvUielements" href="@Url.Action("UserManagement", "Admin")"> <i class="fa fa-desktop"></i> User Management</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-name="DvEmpty" href="@Url.Action("ManagementDetails", "Admin")"><i class="fa fa-fw fa-file"></i> Management Details </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-name="DvForm" href="@Url.Action("PaymentDetails", "Admin")"><i class="fa fa-edit"></i> Payment Details </a>
+                </li>
+
+                
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="~/Content/Dashboard/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="~/Content/Dashboard/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="~/Content/Dashboard/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="~/Content/Dashboard/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="~/Content/Dashboard/js/morris/morris.js"></script>
+
+
+    <script src="~/Content/Dashboard/js/easypiechart.js"></script>
+    <script src="~/Content/Dashboard/js/easypiechart-data.js"></script>
+
+    <script src="~/Content/Dashboard/js/Lightweight-Chart/jquery.chart.js"></script>
+
+    <!-- Custom Js -->
+    <script src="~/Content/Dashboard/js/custom-scripts.js"></script>
+
+
+    <!-- Chart Js -->
+    <script type="text/javascript" src="~/Content/Dashboard/js/Chart.min.js"></script>
+    <script type="text/javascript" src="~/Content/Dashboard/js/chartjs.js"></script>
+    @RenderBody()
+</body>
+</html>
+<script>
+
+    var IndexURL = "@Url.Action("Index", "Admin")";
+    var UserManagementURL = "@Url.Action("UserManagement", "Admin")";
+    var ManagementDetailsURL = "@Url.Action("ManagementDetails", "Admin")";
+    var PaymentDetailsURL = "@Url.Action("PaymentDetails", "Admin")";
+
+    var MorrisChartURL = "@Url.Action("MorrisChart", "Admin")";
+    var ChartURL = "@Url.Action("Chart", "Admin")";
+    var TabPanelURL = "@Url.Action("TabPanel", "Admin")";
+    var TableURL = "@Url.Action("Table", "Admin")";
+    var FormURL = "@Url.Action("Form", "Admin")";
+    var EmptyURL = "@Url.Action("Empty", "Admin")";
+    var LogoutURL = "@Url.Action("Home", "Home")"
+
+    $(document).ready(function () {
+
+        // SlideBar Navigation
+        $(".nav-link").click(function () {
+            $(".nav-item").removeClass("active");
+            $(this).addClass("active");
+            //$(".ClsDvContent").hide();
+            //var name = $(this).data("name");
+            //$("#" + name).show();
+        });
+    });
+</script>
